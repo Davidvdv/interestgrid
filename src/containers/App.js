@@ -8,15 +8,20 @@ import React, {
   Component,
   PropTypes
 } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 import Main from '../components/Main';
-import * as actionCreators from '../actions/interestActionCreators'
+import * as actionCreators from '../actions/interestActionCreators';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 /* Populated by react-webpack-redux:reducer */
 class App extends Component {
   render() {
-    return <Main {...this.props} />;
+    return (
+      <MuiThemeProvider>
+        <Main {...this.props} />
+      </MuiThemeProvider>
+    )
   }
 }
 /* Populated by react-webpack-redux:reducer
@@ -28,10 +33,10 @@ App.propTypes = {
   actions: PropTypes.object.isRequired
 };
 function mapStateToProps(state) {
-  return { interests: state.interests};
+  return {interests: state.interests};
 }
 function mapDispatchToProps(dispatch) {
-  const actionMap = { actions: bindActionCreators(actionCreators, dispatch) };
+  const actionMap = {actions: bindActionCreators(actionCreators, dispatch)};
   return actionMap;
 }
 const ConnectComponent = connect(mapStateToProps, mapDispatchToProps)(App);

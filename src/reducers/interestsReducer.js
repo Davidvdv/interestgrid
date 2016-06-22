@@ -10,9 +10,7 @@ function interests(state = [], action) {
     case INCREMENT_IMPORTANCE:
       return state.map((interest) => {
         if (interest.id === action.id) {
-          return Object.assign({}, interest, {
-            importance: interest.importance +1
-          });
+          return Object.assign({}, interest, {importance: interest.importance +1});
         }
         return interest
       });

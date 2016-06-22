@@ -5,18 +5,19 @@
 
 body {
   background: #eee;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: Roboto, sans-serif;
   color: #333333;
+  margin: 0;
 }
 
-h1 {
-  font-size: 3em;
-}
+/*h1 {*/
+  /*font-size: 3em;*/
+/*}*/
 
-h1, h2 {
-  text-align: center;
-  font-weight: 300;
-}
+/*h1, h2 {*/
+  /*text-align: center;*/
+  /*font-weight: 300;*/
+/*}*/
 
 .interestGrid {
   display: flex;
@@ -27,31 +28,6 @@ h1, h2 {
 .single {
   width: 300px;
   min-height: 150px;
-  background: #fff;
   padding: 20px;
   margin: 0 10px 30px 10px;
-  position: relative;
-  transition: transform 0.2s ease-out;
-}
-
-.single:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.onLoadAnimation {
-  animation-name: load;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0.6, 0.02, 0.15, 0.94);
-  animation-duration: 1s;
-}
-
-@keyframes load {
-  0% {
-    transform: translateY(-80px);
-    opacity: 0
-  }
-  100% {
-    transform: translateY(0);
-  }
 }

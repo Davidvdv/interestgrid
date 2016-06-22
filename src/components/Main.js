@@ -1,14 +1,15 @@
-require('normalize.css/normalize.css');
 require('styles/App.css');
 
 import React from 'react';
 import InterestGrid from './InterestGrid';
 
+import AppBar from 'material-ui/AppBar';
+
 class Main extends React.Component {
   render() {
     return (
       <div>
-        <h1>Interests</h1>
+        <AppBar title="Interests" />
         <InterestGrid {...this.props} />
       </div>
     );

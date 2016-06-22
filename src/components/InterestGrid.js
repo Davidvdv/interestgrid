@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import Single from './Single'
+import Single from './Single';
 
 class InterestGrid extends React.Component {
   render() {
