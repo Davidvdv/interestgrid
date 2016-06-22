@@ -14,6 +14,10 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  text-align: center;
+}
+
 .interestGrid {
   display: flex;
   flex-wrap: wrap;
@@ -21,8 +25,33 @@ h1 {
 }
 
 .single {
-  width: 200px;
+  width: 300px;
+  min-height: 150px;
   background: #fff;
   padding: 20px;
-  margin: 0 10px 20px 10px;
+  margin: 0 10px 30px 10px;
+  position: relative;
+  transition: transform 0.2s ease-out;
+}
+
+.single:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.onLoadAnimation {
+  animation-name: load;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.6, 0.02, 0.15, 0.94);
+  animation-duration: 1s;
+}
+
+@keyframes load {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

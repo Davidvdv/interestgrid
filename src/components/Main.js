@@ -5,14 +5,10 @@ import React from 'react';
 import InterestGrid from './InterestGrid';
 
 class Main extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <div>
-        <h1>JS interests</h1>
+        <h1>Interests</h1>
         <InterestGrid {...this.props} />
       </div>
     );

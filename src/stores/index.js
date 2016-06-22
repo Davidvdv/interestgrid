@@ -5,7 +5,7 @@ import rootReducer from '../reducers/index';
 import interests from '../sources/interests';
 
 const defaultState = {
-  interests: interests
+  interests
 };
 
 const store = createStore(rootReducer, defaultState, window.devToolsExtension && window.devToolsExtension());

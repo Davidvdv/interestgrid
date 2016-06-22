@@ -2,28 +2,20 @@ import React, {PropTypes} from 'react';
 import Single from './Single'
 
 class InterestGrid extends React.Component {
-  componentDidMount() {
-    console.log('componentDidMount', this.props)
-  }
-
   render() {
-    var listItems = this.props.interests.map((item) => {
-      console.log(item)
-      return (
-        <Single key={item.id} interest={item} onClickSingle={this.props.actions.deleteInterest}/>
-      );
-    });
+    let interestsComponents = this.props.interests
+      .map((item) => <Single key={item.id} interest={item} actions={this.props.actions} />);
+
     return (
       <div className="interestGrid">
-        {listItems}
+        {interestsComponents}
       </div>
     );
   }
 }
 
 InterestGrid.defaultProps = {
-  interests: [],
-  onClickSingle: PropTypes.func.isRequired
+  interests: []
 };
 
 export default InterestGrid;

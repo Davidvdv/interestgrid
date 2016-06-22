@@ -1,20 +1,21 @@
 import React, {PropTypes} from 'react';
 
 class Single extends React.Component {
-  componentDidMount() {
-    console.log(this.props.onClickSingle)
-  }
-
   render() {
     return (
-      <div className="single">
+      <div className="single onLoadAnimation">
         <h2>{this.props.interest.text}</h2>
-        <button type="button" onClick={() => this.props.onClickSingle()}>Delete</button>
+        <p>{this.props.interest.importance}</p>
+        <div>
+          <button type="button" onClick={() => this.props.actions.incrementImportance(this.props.interest.id)}>Important</button>
+          <button type="button" onClick={() => this.props.actions.deleteInterest(this.props.interest.id)}>Delete</button>
+        </div>
       </div>
     )
   }
 }
 
-Single.propTypes = {};
+Single.propTypes = {
+};
 
 export default Single;

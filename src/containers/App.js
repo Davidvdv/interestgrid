@@ -11,7 +11,7 @@ import React, {
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Main from '../components/Main';
-import * as actionCreators from '../actions/interests'
+import * as actionCreators from '../actions/interestActionCreators'
 
 /* Populated by react-webpack-redux:reducer */
 class App extends Component {
@@ -32,7 +32,6 @@ function mapStateToProps(state) {
 }
 function mapDispatchToProps(dispatch) {
   const actionMap = { actions: bindActionCreators(actionCreators, dispatch) };
-  console.log('actionMap',actionMap)
   return actionMap;
 }
 const ConnectComponent = connect(mapStateToProps, mapDispatchToProps)(App);
