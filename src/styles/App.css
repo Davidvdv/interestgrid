@@ -4,18 +4,18 @@
 }
 
 body {
-  background: #0b97c4;
-  font-family: Roboto, sans-serif;
+  background: #eee;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #333333;
 }
 
 h1 {
-  text-align: center;
-  color: #2C2C2C;
-  text-transform: uppercase;
+  font-size: 3em;
 }
 
-h2 {
+h1, h2 {
   text-align: center;
+  font-weight: 300;
 }
 
 .interestGrid {
