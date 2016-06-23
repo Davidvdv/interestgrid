@@ -1,21 +1,21 @@
 import React, {PropTypes} from 'react';
 import Single from './Single';
+import InterestCreation from './InterestCreation'
 
 class InterestGrid extends React.Component {
   render() {
-    let interestsComponents = this.props.interests
-      .map((item) => <Single key={item.id} interest={item} actions={this.props.actions} />);
-
     return (
-      <div className="interestGrid">
-        {interestsComponents}
+      <div>
+        <div className="containerCreation">
+          <InterestCreation onInterestCreation={this.props.actions.addInterest} />
+        </div>
+        <div className="interestGrid">
+          {this.props.interests
+            .map((item) => <Single key={item.id} interest={item} actions={this.props.actions}/>)}
+        </div>
       </div>
     );
   }
 }
-
-InterestGrid.defaultProps = {
-  interests: []
-};
 
 export default InterestGrid;

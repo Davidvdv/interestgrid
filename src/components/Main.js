@@ -9,7 +9,7 @@ class Main extends React.Component {
   render() {
     return (
       <div>
-        <AppBar title="Interests" />
+        <AppBar title="Interests" showMenuIconButton={false} />
         <InterestGrid {...this.props} />
       </div>
     );
