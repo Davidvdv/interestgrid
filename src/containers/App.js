@@ -16,6 +16,10 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 /* Populated by react-webpack-redux:reducer */
 class App extends Component {
+  componentWillMount() {
+    console.log(this.props.actions.fetchInterests());
+  }
+
   render() {
     return (
       <MuiThemeProvider>
@@ -36,8 +40,7 @@ function mapStateToProps(state) {
   return {interests: state.interests};
 }
 function mapDispatchToProps(dispatch) {
-  const actionMap = {actions: bindActionCreators(actionCreators, dispatch)};
-  return actionMap;
+  return {actions: bindActionCreators(actionCreators, dispatch)};
 }
 const ConnectComponent = connect(mapStateToProps, mapDispatchToProps)(App);
 export default ConnectComponent;

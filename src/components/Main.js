@@ -2,7 +2,6 @@ require('styles/App.css');
 
 import React from 'react';
 import InterestGrid from './InterestGrid';
-
 import AppBar from 'material-ui/AppBar';
 
 class Main extends React.Component {
